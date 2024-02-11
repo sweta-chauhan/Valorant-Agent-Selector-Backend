@@ -19,7 +19,8 @@ Deployed On *RENDERON*
         "Controller"
     ],
     "success": true
-    }```
+    }
+    ```
 -----
 * AngentList
    *URL Suffix* : `api/agents?role={roldId}&playerId={playerId}`
@@ -29,7 +30,8 @@ Deployed On *RENDERON*
           - default will list all agents having role object
     - playerId
    *Response*
-    ```{
+    ```
+    {
     "agents": [
         {
             "agentId": "e370fa57-4757-3604-3648-499e1f642d3f",
@@ -52,7 +54,9 @@ Deployed On *RENDERON*
             "lockedBy": "e195b61e-2dc9-42f6-aaec-48243d1ac9d5"
         }
     ],
-    "success": true}```
+    "success": true
+    }
+    ```
 
 -----
 * Add Player : POST
@@ -66,7 +70,8 @@ Deployed On *RENDERON*
         "agentSelectionMeta": {}
     },
     "success": true
-    }```
+    }
+    ```
 
 ----
 
