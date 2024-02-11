@@ -4,7 +4,8 @@ const playerSchema = new mongoose.Schema({
   playerId: { type: String, required: true },
   games: {type: [String], default:() => []},
   agentSelectionMeta: {type: mongoose.Schema.Types.Mixed, default:{}},
-  gameStartTime: {type: Date}
+  gameStartTime: {type: Date},
+  profileImage: {type: String, required: true}
   },{ versionKey: false });
 
 

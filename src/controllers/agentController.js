@@ -1,8 +1,6 @@
-const express = require('express');
 const axios = require('axios');
 const agentLock = require("../utils/agentLock");
 const Player = require('../models/player');
-
 
 const agentController = {
     roles : async (req, res) => {
@@ -54,6 +52,12 @@ function getAgentsByRole(agents, role, agentLockedMap, playerId) {
             if (agent.uuid in agentLockedMap){
                 isLocked = agentLockedMap[agent.uuid];
                 player = playerId;
+            }
+            if (agentLockedMap.canSelect){
+                if (!agentLockedMap.canSelect.includes(agent.uuid)){
+                    isLocked = true;
+                }
+                l+=1
             }
             groupedAgents.push({
                 agentId: agent.uuid,

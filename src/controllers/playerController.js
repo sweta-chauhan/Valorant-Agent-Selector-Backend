@@ -1,18 +1,20 @@
 const { v4: uuidv4 } = require('uuid');
 const Player = require('../models/player');
 const gameRuleEngine = require("../utils/gameRuleEngine");
-const { agent } = require('supertest');
+const {gameConfig, userRandomeProfileDummyImages} = require("../common/constants")
 
 const playerController = {
   addNewPlayer: async (req, res) => {
     try {
       const playerId = uuidv4();
-      const player = new Player({playerId: playerId});
+      const profileImage = getRandomProfileImage();
+      const player = new Player({playerId: playerId, profileImage: profileImage});
       await player.save();
       res.status(201).json(
         {
             data: {
               playerId: playerId,
+              profileImage: player.profileImage,
               games: [],
               agentSelectionMeta: {}
             },
@@ -38,6 +40,7 @@ const playerController = {
           {
               data: {
                 playerId: playerId,
+                profileImage: player.profileImage,
                 games: player.games,
                 agentSelectionMeta: player.agentSelectionMeta || {},
                 gameStartTime: player.gameStartTime || null
@@ -114,6 +117,7 @@ const playerController = {
             res.status(200).json({
               success: true,
               playerId: playerId,
+              profileImage: player.profileImage,
               games: player.games,
               agentSelectionMeta: player.agentSelectionMeta,
               gameStartTime: player.gameStartTime
@@ -139,5 +143,9 @@ const playerController = {
   },
 };
 
+function getRandomProfileImage(list) {
+  const randomIndex = Math.floor(Math.random() * userRandomeProfileDummyImages.length);
+  return userRandomeProfileDummyImages[randomIndex];
+}
 
 module.exports = playerController;
