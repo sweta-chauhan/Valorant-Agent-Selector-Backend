@@ -11,10 +11,11 @@ const playerRoutes = require('./routes/playerRoutes');
 connect();
 
 const app = express();
-app.use(cors());
+
 const PORT = process.env.PORT || 8000;
 
 // Middleware
+app.use(cors());
 app.use(bodyParser.json());
 
 
