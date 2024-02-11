@@ -5,25 +5,25 @@
 
 * Roles Lisitng API
   *URL Suffix* : `/api/roles`
-Response 
-```{
-    "roles": [
+  *Response* 
+    ```{
+        "roles": [
         "Initiator",
         "Sentinel",
         "Duelist",
         "Controller"
     ],
     "success": true
-}```
-
+    }```
+-----
 * AngentList
    *URL Suffix* : `api/agents?role={roldId}&playerId={playerId}`
-     query params
+   *query params*
     - role filter
           - anyOf ["Initiator","Sentinel","Duelist","Controller"]
           - default will list all agents having role object
     - playerId
-    Response
+   *Response*
 ```{
     "agents": [
         {
