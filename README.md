@@ -6,7 +6,8 @@
 * Roles Lisitng API
   *URL Suffix* : `/api/roles`
   *Response* 
-    ```{
+    ```
+    {
         "roles": [
         "Initiator",
         "Sentinel",
@@ -53,7 +54,8 @@
 * Add Player : POST
     *URL Suffix* : `/api/add-player`
     *Response*
-    ```{
+    ```
+    {
         "data": {
         "playerId": "10810a49-96b3-42fa-88af-1a69682a3789",
         "games": [],
@@ -67,7 +69,8 @@
 * Get Player : UID in path
   *URL Suffix* : `/api/player/:playerId` 
   *Response*: 
-    ```{
+    ```
+    {
     "data": {
         "playerId": "10810a49-96b3-42fa-88af-1a69682a3789",
         "games": [],
@@ -81,12 +84,14 @@
 * Locking Agent : UID in path
   *URL Suffix* : `api/lock-agent/:playerId`
   *Request Body* : 
-  ```{
+  ```
+  {
     "agentId": "e370fa57-4757-3604-3648-499e1f642d3f"
   }```
 
   *Response*
-    ```{
+    ```
+    {
         "success": true,
         "playerId": "10810a49-96b3-42fa-88af-1a69682a3789",
         "games": [
