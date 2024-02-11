@@ -1,8 +1,6 @@
 const express = require('express');
 require('dotenv').config();
 const cors = require('cors');
-// Use cors middleware to enable CORS for all routes
-app.use(cors());
 const { connect, close } = require('./db');
 const bodyParser = require('body-parser');
 const agentRoutes = require('./routes/agentRoute');
@@ -15,9 +13,8 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 // Middleware
-app.use(cors());
 app.use(bodyParser.json());
-
+app.use(cors());
 
 // Routes
 app.use('/api', agentRoutes);
