@@ -104,8 +104,8 @@ Deployed On *RENDERON*
         "gameStartTime": "2024-02-11T10:35:13.218Z"
     },
     "success": true
-}
-```
+}```
+
 
 -----
 * Locking Agent : UID in path
@@ -114,7 +114,8 @@ Deployed On *RENDERON*
   ```
   {
     "agentId": "e370fa57-4757-3604-3648-499e1f642d3f"
-  }```
+  }
+  ```
 
   *Response*
     ```
@@ -128,6 +129,7 @@ Deployed On *RENDERON*
         "agentSelectionMeta": {
             "e370fa57-4757-3604-3648-499e1f642d3f": 1
         }
-    }```
+    }
+    ```
 
 
