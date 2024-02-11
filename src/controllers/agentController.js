@@ -57,7 +57,6 @@ function getAgentsByRole(agents, role, agentLockedMap, playerId) {
                 if (!agentLockedMap.canSelect.includes(agent.uuid)){
                     isLocked = true;
                 }
-                l+=1
             }
             groupedAgents.push({
                 agentId: agent.uuid,
