@@ -1,9 +1,6 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
-const password = process.env.DB_PASSWORD;
-const dbName = process.env.DB_NAME || "valorant";
-const mongoURI = process.env.MONGO_URI || `mongodb://localhost:27017/${dbName}`;
-
+const mongoURI = process.env.MONGO_URI || `mongodb://localhost:27017/valorant`;
 const connect = async () => {
   try {
     const url = mongoURI;

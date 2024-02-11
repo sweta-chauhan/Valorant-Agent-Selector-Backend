@@ -1,3 +1,5 @@
+const gameConfig = require("../common/constants")
+
 class agentLock {
     constructor(playerObj){
         this.playerObj = playerObj;
@@ -8,6 +10,10 @@ class agentLock {
         let agentLockFlagMap = {};
         if (games){
             agentLockFlagMap[games[games.length - 1]] = true;
+        }
+        if (games.length > gameConfig.CONDITION_AFTER_LAST_PLAYEDGAME){
+            const agentSelectedInLastRound = [...new Set(this.playerObj.games.slice(-gameConfig.CONDITION_AFTER_LAST_PLAYEDGAME))];
+            const differntSelectedAgent = agentSelectedInLastRound.length;
         }
         if (agentSelectionMeta){
             for (const [key, value] of Object.entries(agentSelectionMeta)) {
