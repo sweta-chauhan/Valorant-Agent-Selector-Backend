@@ -66,6 +66,7 @@ Deployed On *RENDERON*
     {
         "data": {
         "playerId": "10810a49-96b3-42fa-88af-1a69682a3789",
+        "profileImage": "https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/displayicon.png",
         "games": [],
         "agentSelectionMeta": {}
     },
@@ -82,12 +83,29 @@ Deployed On *RENDERON*
     {
     "data": {
         "playerId": "10810a49-96b3-42fa-88af-1a69682a3789",
-        "games": [],
-        "agentSelectionMeta": {},
-        "gameStartTime": null
+        "games": [
+            "e370fa57-4757-3604-3648-499e1f642d3f",
+            "8e253930-4c05-31dd-1b6c-968525494517",
+            "a3bfb853-43b2-7238-a4f1-ad90e9e46bcc",
+            "8e253930-4c05-31dd-1b6c-968525494517",
+            "a3bfb853-43b2-7238-a4f1-ad90e9e46bcc",
+            "8e253930-4c05-31dd-1b6c-968525494517",
+            "a3bfb853-43b2-7238-a4f1-ad90e9e46bcc",
+            "7f94d92c-4234-0a36-9646-3a87eb8b5c89",
+            "bb2a4828-46eb-8cd1-e765-15848195d751"
+        ],
+        "agentSelectionMeta": {
+            "e370fa57-4757-3604-3648-499e1f642d3f": 1,
+            "8e253930-4c05-31dd-1b6c-968525494517": 3,
+            "a3bfb853-43b2-7238-a4f1-ad90e9e46bcc": 3,
+            "7f94d92c-4234-0a36-9646-3a87eb8b5c89": 1,
+            "bb2a4828-46eb-8cd1-e765-15848195d751": 1
+        },
+        "gameStartTime": "2024-02-11T10:35:13.218Z"
     },
     "success": true
-}```
+}
+```
 
 -----
 * Locking Agent : UID in path
@@ -103,6 +121,7 @@ Deployed On *RENDERON*
     {
         "success": true,
         "playerId": "10810a49-96b3-42fa-88af-1a69682a3789",
+        "profileImage": "https://media.valorant-api.com/agents/7f94d92c-4234-0a36-9646-3a87eb8b5c89/displayicon.png",
         "games": [
             "e370fa57-4757-3604-3648-499e1f642d3f"
         ],
